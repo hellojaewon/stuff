@@ -1,6 +1,6 @@
 .DEFAULT:
-test: test.cpp
-	gcc -o test test.cpp
+test: test.cpp utils.cpp
+	gcc -o test test.cpp utils.cpp
 
-all: test.cpp
-	gcc -o test test.cpp
+all: test.cpp utils.cpp
+	gcc -o test test.cpp utils.cpp
