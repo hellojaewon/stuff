@@ -5,6 +5,6 @@ before_install:
     - sudo pip install cpp-coveralls
 script:
     - make
-    - /src/test
+    - ./src/test
 after_success:
     - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
