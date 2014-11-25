@@ -3,13 +3,13 @@
 #include "heap.h"
 
 MinHeap::MinHeap (int capacity) {
-    m_elements = new int[capacity];
+    m_elements = new int[capacity+1];
     m_capacity = capacity;
     m_size = 0;
 }
 
 MinHeap::~MinHeap () {
-    delete m_elements;
+    delete[] m_elements;
 }
 
 void MinHeap::MinHeapify (int parent) {

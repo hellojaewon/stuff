@@ -2,13 +2,17 @@
 #include <cstdlib>
 #include <ctime>
 #include <cassert>
-#include "heap.h"
+#include "../src/heap.h"
 
-int main () {
-    int size;
+int main (int argc, char ** argv) {
+    if (argc != 2) {
+      printf("usage: ./HeapTest [heap size]\n");
+      return -1;
+    }
 
-    printf("heap size : ");
-    scanf("%d", &size);
+    int size = atoi(argv[1]);
+    if (size < 0)
+      size = 0;
 
     MinHeap * heap = new MinHeap(size);
 

@@ -5,7 +5,7 @@
 
 class MinHeap {
 public:
-    MinHeap (int size = DEFAULT_MAX_HEAP_SIZE);
+    MinHeap (int capacity = DEFAULT_MAX_HEAP_SIZE);
     ~MinHeap ();
 
     bool Insert (int key);
