@@ -14,21 +14,24 @@ int main (int argc, char ** argv) {
     if (size < 0)
       size = 0;
 
-    MinHeap * heap = new MinHeap(size);
+    Heap<char> * heap = new Heap<char>(size);
 
     // generates heap with random values
     srand(time(NULL));
     for(unsigned i = 0; i < size; i++) {
-        if (!heap->Insert(rand() % 100))
+        unsigned random = rand() % 100;
+        Element<char> e(random, 'a'+random);
+        if (!heap->Insert(e))
             printf("insert failed(%d)\n", i);
     }
 
     // delete elements from heap
     int minimum = -1;
     for (unsigned i = 0; i < size; i++) {
-        int min = heap->Delete();
-        assert(minimum <= min);
-        minimum = min;
+        Element<char> * min = heap->Delete();
+        assert(minimum <= min->GetKey());
+        minimum = min->GetKey();
+        delete min;
     }
     printf("test completed!\n");
 
