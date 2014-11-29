@@ -20,7 +20,7 @@ int main (int argc, char ** argv) {
     srand(time(NULL));
     for(unsigned i = 0; i < size; i++) {
         unsigned random = rand() % 100;
-        Element<char> e(random, 'a'+random);
+        Element<char> e(random, random+5);
         if (!heap->Insert(e))
             printf("insert failed(%d)\n", i);
     }

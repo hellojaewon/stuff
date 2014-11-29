@@ -22,8 +22,13 @@ public:
         this->m_value = rhs.m_value;
         return *this;
     }
+    bool operator< (const Element<T> & rhs) {
+        return this->m_key < rhs.m_key;
+    }
+
     void SetKey (int key) { m_key = key; }
     int GetKey () { return m_key; }
+    const T & GetValue () { return m_value; }
 
 private:
     int m_key;
@@ -69,9 +74,9 @@ void Heap<T>::Heapify (int parent) {
     rightChild = leftChild + 1;
 
     smallest = parent;
-    if (leftChild <= m_size && m_elements[leftChild].GetKey() < m_elements[parent].GetKey())
+    if (leftChild <= m_size && m_elements[leftChild] < m_elements[parent])
         smallest = leftChild;
-    if (rightChild <= m_size && m_elements[rightChild].GetKey() < m_elements[smallest].GetKey())
+    if (rightChild <= m_size && m_elements[rightChild] < m_elements[smallest])
         smallest = rightChild;
     if (smallest != parent) {
         std::swap(m_elements[parent], m_elements[smallest]);
