@@ -1,7 +1,7 @@
 # stuff
 
-[![Build Status](https://travis-ci.org/HelloJaewon/stuff.svg?branch=master)](https://travis-ci.org/HelloJaewon/stuff)
-[![Coverage Status](https://coveralls.io/repos/HelloJaewon/stuff/badge.png?branch=master)](https://coveralls.io/r/HelloJaewon/stuff?branch=master)
+[![Build Status](https://travis-ci.org/hellojaewon/stuff.svg?branch=master)](https://travis-ci.org/hellojaewon/stuff)
+[![Coverage Status](https://coveralls.io/repos/hellojaewon/stuff/badge.png?branch=master)](https://coveralls.io/r/hellojaewon/stuff?branch=master)
 
 ## Overview
 
